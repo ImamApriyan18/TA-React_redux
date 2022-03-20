@@ -1,9 +1,10 @@
 import React from 'react';
-import { connect } from 'react-redux'
-import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { Link, Outlet } from 'react-router-dom';
 
 const Navbar = (props) => {
   return (
+    <>
     <nav className="nav-wrapper light-green accent-4">
       <div className="container">
         <Link to="/" className="brand-logo">Shopping</Link>
@@ -15,6 +16,8 @@ const Navbar = (props) => {
         </ul>
       </div>
     </nav>
+    <Outlet/>
+    </>
   )
 }
 
